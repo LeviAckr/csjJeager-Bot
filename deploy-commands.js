@@ -24,14 +24,13 @@ const tipo = 0, exclusao = 0;
 
 		let data = 0;
 
-		if (!tipo)
+		if (!tipo) // Comandos locais
 			data = await rest.put(
 				Routes.applicationGuildCommands(clientId, guildId),
 				{ body: commands },
 			);
 
-		if (tipo)
-			// comandos globais
+		if (tipo) // Comandos globais
 			data = await rest.put(
 				Routes.applicationCommands(clientId),
 				{ body: commands },
