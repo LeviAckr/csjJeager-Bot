@@ -1,0 +1,19 @@
+{
+  "name": "csjmusic",
+  "version": "1.0.0",
+  "description": "bot do csj",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "enmap": "^5.8.7",
+    "fs": "^0.0.1-security",
+    "heroku": "^7.56.1",
+    "path": "^0.12.7",
+    "wax-command-handler": "^1.10.0"
+  }
+}
