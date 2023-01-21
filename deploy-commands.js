@@ -1,3 +1,4 @@
+require('dotenv').config()
 const { REST, Routes } = require('discord.js');
 const { clientId, guildId, token } = require('./config.json');
 const fs = require('node:fs');
@@ -13,7 +14,7 @@ for (const file of commandFiles) {
 }
 
 // Constrói e prepara uma instância do módulo REST
-const rest = new REST({ version: '10' }).setToken(token);
+const rest = new REST({ version: '10' }).setToken(process.env.token);
 
 // tipo 0 -> comandos locais; tipo 1 -> comandos globais
 const tipo = 0, exclusao = 0;

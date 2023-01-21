@@ -4,7 +4,7 @@
   "description": "bot do csj",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon test"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +14,7 @@
     "enmap": "^5.8.7",
     "fs": "^0.0.1-security",
     "heroku": "^7.56.1",
+    "nodemon": "^2.0.20",
     "path": "^0.12.7",
     "wax-command-handler": "^1.10.0"
   }
