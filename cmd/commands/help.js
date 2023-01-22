@@ -19,6 +19,8 @@ module.exports = {
             ("\n") + 
             ("\n`/git (REPOSITORIO DO BOT)`") +
             ("\n`/help (COMANDOS)`") + 
+            ("\n`/reverter (REVERTE SEU TEXTO)`") + 
+            ("\n`/infos (INFORMAÇÕES DO BOT)`") + 
             ("\n") +
             ("\n") +   
             ("\n**🔧 PACOTES ⚙️**") + 

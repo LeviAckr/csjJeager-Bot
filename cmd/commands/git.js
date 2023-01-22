@@ -12,7 +12,7 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setTitle(`${client.emojis.cache.get(`1066467891223986340`)} Repositorio (CSJ JEAGER) ${client.emojis.cache.get(`1066467891223986340`)}`)
             .setColor("#000000")
-            .setDescription(":arrow_up: Servidor Acima :arrow_up: ")
+            .setDescription(":arrow_up: Repositorio Acima :arrow_up: ")
             .setURL("https://github.com/LeviAckr/csjJeager-Bot")
            .setImage(aot[gif])
             
