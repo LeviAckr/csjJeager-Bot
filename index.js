@@ -1,4 +1,5 @@
 require('dotenv').config()
+const { readdirSync } = require('fs')
 
 const { Client, GatewayIntentBits, IntentsBitField, ActivityType, Collection, Events, message, Partials, SlashCommandBuilder } = require('discord.js')
 
@@ -26,37 +27,21 @@ const client = new Client({
 const prefix = "["
 
 client.on("ready", () => {
-
+client.commands = new Collection();
 	// Logando com a pasta de comandos!
-	client.commands = new Collection();
-	const commandsPath = path.join(__dirname, 'cmd/commands');
-	const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+	for (const folder of readdirSync(`${__dirname}/cmd/`)) {
+		for (const file of readdirSync(`${__dirname}/cmd/${folder}`).filter(file => file.endsWith('.js'))) {
+			const command = require(`./cmd/${folder}/${file}`)
 
-	client.commands = new Collection();
-	const commandsPath2 = path.join(__dirname, 'cmd/aotper');
-	const commandFiles2 = fs.readdirSync(commandsPath2).filter(file => file.endsWith('.js'));
 
-	
-	for (const file of commandFiles) {
-		const filePath = path.join(commandsPath, file);
-		const command = require(filePath);
 
-		if ('data' in command && 'execute' in command)
-			client.commands.set(command.data.name, command);
-		else
-			console.log(`[WARNING] O comando ${filePath} ainda não possui o necessario para sua execusão.`);
+
+			if ('data' in command && 'execute' in command)
+				client.commands.set(command.data.name, command);
+			else
+				console.log(`[WARNING] O comando ${filePath} ainda não possui o necessario para sua execusão.`);
+		}
 	}
-
-	for (const file of commandFiles2) {
-		const filePath = path.join(commandsPath2, file);
-		const command = require(filePath);
-
-		if ('data' in command && 'execute' in command)
-			client.commands.set(command.data.name, command);
-		else
-			console.log(`[WARNING] O comando ${filePath} ainda não possui o necessario para sua execusão.`);
-	}
-
 	client.on(Events.InteractionCreate, async interaction => {
 		if (!interaction.isChatInputCommand()) return;
 
@@ -77,7 +62,7 @@ client.on("ready", () => {
 
 	// Inicio
 	client.user.setPresence({
-		activities: [{ name: `🎧 Som na caixa Dj 🎤`, type: ActivityType.Playing }],
+		activities: [{ name: `🌪 ATTACK ON TITAN 🌪`, type: ActivityType.Watching }],
 		status: 'online',
 	});
 

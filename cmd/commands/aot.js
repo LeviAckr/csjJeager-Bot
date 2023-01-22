@@ -17,7 +17,8 @@ module.exports = {
 
     ]
     let fala = Math.round((falas.length - 1) * Math.random())
-
-    interaction.reply(falas[fala] + aot[gif]);
+    const channel = interaction.channel
+    interaction.reply(falas[fala]);
+    client.channels.cache.get(channel.id).send(aot[gif])
   }
 }
