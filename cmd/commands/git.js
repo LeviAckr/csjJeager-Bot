@@ -13,7 +13,7 @@ module.exports = {
             .setTitle(`${client.emojis.cache.get(`1066467891223986340`)} "Repositorio (CSJ MUSIC)" ${client.emojis.cache.get(`1066467891223986340`)}`)
             .setColor("#000000")
             .setDescription(":arrow_up: Servidor Acima :arrow_up: ")
-            .setURL("https://github.com/LeviAckr/csjMusic-Bot")
+            .setURL("https://github.com/LeviAckr/csjJeager-Bot")
            .setImage(aot[gif])
             
         interaction.reply({ embeds: [embed]})
