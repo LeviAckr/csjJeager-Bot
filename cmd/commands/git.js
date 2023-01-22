@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js')
-const {aot} = require("../emj/aot.json")
+const {aot} = require("../../emj/aot.json")
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('git')

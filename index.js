@@ -29,10 +29,26 @@ client.on("ready", () => {
 
 	// Logando com a pasta de comandos!
 	client.commands = new Collection();
-	const commandsPath = path.join(__dirname, 'commands');
+	const commandsPath = path.join(__dirname, 'cmd/commands');
 	const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
+
+	client.commands = new Collection();
+	const commandsPath2 = path.join(__dirname, 'cmd/aotper');
+	const commandFiles2 = fs.readdirSync(commandsPath2).filter(file => file.endsWith('.js'));
+
+	
 	for (const file of commandFiles) {
 		const filePath = path.join(commandsPath, file);
+		const command = require(filePath);
+
+		if ('data' in command && 'execute' in command)
+			client.commands.set(command.data.name, command);
+		else
+			console.log(`[WARNING] O comando ${filePath} ainda não possui o necessario para sua execusão.`);
+	}
+
+	for (const file of commandFiles2) {
+		const filePath = path.join(commandsPath2, file);
 		const command = require(filePath);
 
 		if ('data' in command && 'execute' in command)
