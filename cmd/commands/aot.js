@@ -13,7 +13,8 @@ module.exports = {
     let falas = [
         "**TATAKAE**",
         "**SASAGEYO**",
-        "OFEREÇAM SEUS CORAÇÕES"
+        "**OFEREÇAM SEUS CORAÇÕES**",
+        "**SHINZOU WO SASAGEYO**"
 
     ]
     let fala = Math.round((falas.length - 1) * Math.random())

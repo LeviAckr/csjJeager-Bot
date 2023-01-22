@@ -25,6 +25,7 @@ module.exports = {
             ("\n") +
             ("\n`/instalar (INSTALA PACOTES PARA O SERVIDOR)`") +
             ("\n`/ping (MOSTRA O PING DO BOT)`") +
+            ("\n`/ram (CONSUMO DE RAM DO BOT)`") +
             ("\n") +
             ("\n** 🗡 ESPECIAIS (ATTACK ON TITAN) 🗡 **") +
             ("\n") +
