@@ -71,7 +71,7 @@ client.commands = new Collection();
 
 	client.on("messageCreate", (message) => {
 		if (message.mentions.has(client.user))
-			message.channel.send(`${mikasa} \`Prontinho pra tocar sua música\` ${levi}`)
+			message.channel.send(`${mikasa} \` TATAKAE utilize /help para ver meus comandos\` ${levi}`)
 	})
 
 	// PING CMMD

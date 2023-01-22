@@ -2,7 +2,7 @@
 
  - csj server bot on discord
  - its goal is to play music based on spotify and youtube as well as other streaming banks
- - least version `4.2` 
+ - least version `5.8` 
 
 
 ## How to install
