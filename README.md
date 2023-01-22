@@ -1,4 +1,4 @@
-# Csj Music 
+# Csj Jeager
 
  - csj server bot on discord
  - its goal is to play music based on spotify and youtube as well as other streaming banks
